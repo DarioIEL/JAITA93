@@ -82,3 +82,18 @@ if(punteggio >= 25 || skill >= 10){
 let restoDiv = 24 % 2; //0 -> Pari
 
 let restoDiv2 = 25 % 2;//1 -> Dispari
+
+
+///OPERATORE TERNARIO///
+let oraEsatta = 20;
+
+let saluto = oraEsatta <= 18 ? "Buongiorno" : "Buonasera";
+
+console.log(saluto);
+
+
+// if(oraEsatta <= 18){
+//     console.log("Buongiorno");
+// }else{
+//     console.log("Buonasera");
+// }
