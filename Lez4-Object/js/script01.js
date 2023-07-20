@@ -38,3 +38,6 @@ console.log(admin.role);
 
 admin.modificaPassword("5678");
 console.log(admin.password);
+
+//Il this utilizzato nello script e basta fa riferimento a Window
+console.log(this);

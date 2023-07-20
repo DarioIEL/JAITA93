@@ -1,4 +1,4 @@
-//NOtazione con funzione Costruttore
+//Notazione con funzione Costruttore
 function Studente(nome, cognome, matricola, voto, alias){
     this.nome = nome; 
     this.cognome = cognome;
@@ -17,15 +17,16 @@ function Studente(nome, cognome, matricola, voto, alias){
     }
 }
 
-class Persona{
-    nome;
-    cognome;
+//Esempio di classe (Da non guardare)
+// class Persona{
+//     nome;
+//     cognome;
 
-    Persona(nome, cognome){
-        this.nome = nome;
-        this.cognome = cognome;
-    }
-}
+//     Persona(nome, cognome){
+//         this.nome = nome;
+//         this.cognome = cognome;
+//     }
+// }
 
 //creo le istanze dello Studente
 // let studente1 = new Studente("Zaccaria", "Palmiero", "A345", 30);
