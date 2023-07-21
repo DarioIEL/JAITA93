@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Costruire 2 form 
+    Campi: Nome e Cognome, Codice Fiscale, età  --> 
+
+    <!-- Form 1: 
+    Nel primo form i campi sono recuperati come variabili globali e controllati nelle rispettive funzioni-->
+
+    <!-- Form 2 :
+    In Questo form recupera i campi e il loro value all'interno delle funzioni -->
+
+    <!-- Controlli da eseguire
+    TUTTI I CAMPI DEVONO ESSERE OBBLIGATORI
+    Nome e Cognome devono essere 2 parole separate da 1 spazio 
+    codiceFiscale deve essere un codice fiscale (DOPO)
+    età deve essere >= 18 -->
+
+    <div id="form1">
+        <h2>Form 1</h2>
+
+        <label for="nome">Nome e Cognome: </label>
+        <input type="text" id="nome"> <br>
+
+        <label for="codiceFiscale">Codice Fiscale:</label>
+        <input type="text" id="codFisc"> <br>
+
+        <label for="eta">Età:</label>
+        <input type="number" id="eta"> <br>
+
+        <input type="button" id="btn1" value="Invia">
+
+        <div id="feed1"></div>
+
+        <div id="demo1"></div>
+    </div>
+
+    <div id="form2">
+        <h2>Form 2</h2>
+        
+        <label for="nome2">Nome e Cognome: </label>
+        <input type="text" id="nome2"> <br>
+
+        <label for="codiceFiscale2">Codice Fiscale:</label>
+        <input type="text" id="codFisc2"> <br>
+
+        <label for="eta2">Età:</label>
+        <input type="number" id="eta2"> <br>
+
+        <input type="button" id="btn2" value="Invia">
+
+        <div id="feed2"></div>
+
+        <div id="demo2"></div>
+    </div>
+
+
+</body>
+</html>
