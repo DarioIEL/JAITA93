@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="demo">Questo è un div di demo</div>
+
+    <h2>Spesa</h2>
+    <ul>
+        <li class="txtBlue" id="uno">Pasta</li>
+        <li class="txtBlue" id="due">Vino</li>
+        <li class="txtBlue" id="tre">Nutella</li>
+    </ul>
+
+    <h2>Libri</h2>
+    <ul>
+        <li>Dune</li>
+        <li>Circe</li>
+        <li>Q</li>
+        <li>Ubik</li>
+    </ul>  
+    
+    <script>
+        //senza toccare l'html rendere di colore rosso solo i libri
+        let listaLibri = document.querySelectorAll("ul")[1]; //UL
+        listaLibri.setAttribute("class", "txtRed");
+
+        let libri = listaLibri.children; //Collection --> NON è un ARRAY
+        
+        console.log(libri);
+        for(let i = 0 ; i < libri.length; i++){
+            libri[i].setAttribute("class", "underLine");
+        }
+
+
+    </script>
+</body>
+</html>

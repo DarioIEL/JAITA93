@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="demo">Questo è un div di demo</div>
+
+    <h2>Spesa</h2>
+    <ul id="listaSpesa">
+        <li class="txtBlue" id="uno">Pasta</li>
+        <li class="txtBlue" id="due">Vino</li>
+        <li class="txtBlue" id="tre">Nutella</li>
+    </ul>
+
+    <h2>Libri</h2>
+    <ul id="listaLibri">
+        <li>Dune</li>
+        <li>Circe</li>
+        <li>Q</li>
+        <li>Ubik</li>
+    </ul>
+
+
+
+    <script>
+    //querySelectorAll("sintassi CSS");
+    //recupera più elementi contemporaneamente, costruisce una NodeList (parente stretto degli array)
+
+    // let lisSpesa = document.querySelectorAll("li");  //nodelist
+    let lisSpesa = document.querySelectorAll("ul#listaSpesa li.txtBlue");  //nodelist
+    
+    console.log(lisSpesa);
+
+    // leggo il contenuto del primo li
+    console.log(lisSpesa[0].innerHTML);
+    console.log(lisSpesa[0].textContent);
+
+    //modifico il contenuto del terzo li 
+    lisSpesa[2].textContent = "Pan di Stelle";
+
+    //voglio recuperare i testi di tutti gli li 
+    lisSpesa.forEach(li =>{
+        console.log(li.textContent);
+    });
+
+    //voglio mettere in rosso solo i libri applicando la classe txtRed
+    let lisLibri = document.querySelectorAll("ul#listaLibri li"); //NodeList
+
+    for(let i = 0; i < lisLibri.length; i++){
+        lisLibri[i].setAttribute("class", "txtRed");
+    }
+
+
+    //ATT: adesso passerò un id al querySelectorAll
+    let liVino = document.querySelectorAll("#due"); //crea comunque una Nodelist con un elemento all'interno
+
+    console.log(liVino);
+
+    liVino[0].textContent = "Birra";
+
+    </script>
+
+</body>
+</html>

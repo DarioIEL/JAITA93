@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="demo">
+        <p>Questo è un demo</p> 
+    </div>
+
+
+    <div id="feed">
+        Questo è un feedback
+    </div>
+
+    <script>
+        //voglio leggere il contenuto di demo solo testo
+        let contDemo = document.querySelector("#demo").textContent;
+        console.log(contDemo);
+
+        let contDemo2 = document.querySelector("#demo").innerHTML;
+        console.log(contDemo2);
+
+        //Voglio sostituire il contenuto di feed
+
+        let feed = document.querySelector("#feed");
+        // feed.textContent = "Ciao come stai ?";
+
+        //sostituisco il contenuto di feed con un h1
+        feed.innerHTML = "<h1>Ciao, come stai ? </h1>";
+
+        //Questo sotto non può funzionare
+        // feed.textContent= "<h1>Ciao, come stai ? </h1>";
+
+    </script>    
+</body>
+</html>

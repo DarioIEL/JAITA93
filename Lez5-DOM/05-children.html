@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <!-- children[0] -->
+        <h1>Lista Libri</h1>
+        
+        <!-- children[1] -->
+        <ul id="listaLibri">
+            <!-- i miei li sono childre[1].children -->
+            <li>Dune</li>
+            <li>Harry Potter</li>
+            <li>Le mille e una notte</li>
+            <li>Il rosso e il nero</li>
+            <li>Il conte di Montecristo</li>
+        </ul>
+    </div>
+
+
+    <script>
+        //Recupero la lista libri, ogni singolo libro
+        let listaLibri = document.querySelector("#listaLibri");
+        let libri = listaLibri.children; //HTMLCollection (un inseieme di elementi e quindi oggetti HTML) --> NO Array
+
+        // let libri = document.querySelectorAll("#listaLibri li");
+
+        [...libri].forEach(libro => {
+            console.log(libro); //scrivo gli oggetti li
+            console.log(libro.textContent); //scrivo i testi degli li
+        })
+
+        let primoLibro = listaLibri.firstElementChild.textContent;
+        console.log(primoLibro);
+
+        let ultimoLibro = listaLibri.lastElementChild.textContent;
+        console.log(ultimoLibro);
+
+
+        //Recupero alternativo degli li
+        
+        //  let listaLibriALT = document.querySelector("div.container").children[1].children;
+
+        let listaLibriALT = document.querySelectorAll("div.container li");
+
+        //[...nomeLista] --> Array
+        //[array1...array2] ->> concatena gli array
+        [...listaLibriALT].forEach(libro =>{
+            libro.setAttribute("class", "txtRed");
+        })
+
+        console.log(listaLibriALT);
+
+
+    </script>
+</body>
+</html>
