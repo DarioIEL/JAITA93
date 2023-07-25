@@ -19,3 +19,7 @@
     height: auto;
     overflow: hidden;
 }
+
+.barrato{
+    text-decoration: line-through;
+}

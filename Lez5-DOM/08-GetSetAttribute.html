@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+
     <h1 id="titolo">Vendita Piante e Fiori</h1>
-    
+
     <div>
-       <img id="imgPianta" class="imgRes"> 
+        <img id="imgPianta" class="imgRes">
     </div>
 
 
@@ -35,8 +37,35 @@
         imgPianta.setAttribute("alt", "immagine di pianta famiglia Monstera");
 
         //dato un array di immagini di piante, sostituire l'immagine ogni 3 secondi
+        let piante = ["alocasia", "anthurium", "banano", "monstera"];
+
+        let i = 0; //inizializzazione
+        
+        setInterval(()=>{
+
+            i++; //aggiornamento
+
+            if(i == piante.length){ //condizione
+                i = 0;
+            }
+
+            let path = `./img/${piante[i]}.jpg`;
+
+            imgPianta.setAttribute("src", path);
+            
+            //oppure soluzione vecchia
+            // imgPianta.src = piante[i]
+
+            //soluzione con modulo
+            // i = (i+1)%piante.length;
+
+        }, 3000)
 
 
+        
+    
+    
     </script>
 </body>
+
 </html>

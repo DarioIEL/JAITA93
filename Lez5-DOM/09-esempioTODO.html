@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <h1>Lista To DO</h1>
+
+    <input type="text" placeholder="todo" id="itemTodo"><br>
+    <button id="btn">Add</button>
+
+    <hr>
+
+    <ul id="listaTodos"></ul>
+
+
+    <script>
+
+        let listaTodos = document.querySelector("#listaTodos");
+
+        let btn = document.querySelector("#btn");
+
+        function aggiungi(){
+            let itemTodo = document.querySelector("#itemTodo").value;
+
+            let li = document.createElement("li");
+            li.textContent = itemTodo;
+            li.setAttribute("class", "txtGreen");
+
+            //creo la funzionalità per mettere il barrato ogni volta che clicco sul singolo li
+            li.addEventListener("click", function(){
+                if(this.classList.contains("barrato")){
+                    this.classList.remove("barrato");
+                }else{
+                    // this.setAttribute("class", "barrato");
+                    this.classList.add("barrato");
+                }
+            });
+
+            //creo il pulsante per eliminare
+            let btnElim = document.createElement("button");
+            btnElim.textContent = " X ";
+            li.appendChild(btnElim);
+
+            btnElim.addEventListener("click", function(){
+                listaTodos.removeChild(li);
+            })
+            
+            listaTodos.appendChild(li);
+
+            document.querySelector("#itemTodo").value = "";
+        }
+
+        btn.addEventListener("click", aggiungi);
+
+
+
+
+    </script>
+</body>
+</html>
