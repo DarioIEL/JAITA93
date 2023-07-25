@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1 id="titolo">Vendita Piante e Fiori</h1>
+    
+    <div>
+       <img id="imgPianta" class="imgRes"> 
+    </div>
+
+
+    <script>
+        //1: inserire la classe al titolo h1
+        let titolo = document.querySelector("#titolo");
+        //non avendo una classe setto l'attributo da zero
+        titolo.setAttribute("class", "txtGreen");
+        // if(titolo.hasAttribute("class")){
+        //     titolo.classList.add("txtGreen");
+        // }else{
+        //     titolo.setAttribute("class", "txtGreen");
+        // }
+
+
+        //2. inserire l'immagine
+        let imgPianta = document.querySelector("#imgPianta");
+
+        imgPianta.setAttribute("src", "./img/monstera.jpg");
+        imgPianta.setAttribute("alt", "immagine di pianta famiglia Monstera");
+
+        //dato un array di immagini di piante, sostituire l'immagine ogni 3 secondi
+
+
+    </script>
+</body>
+</html>

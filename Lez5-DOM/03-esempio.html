@@ -35,10 +35,13 @@
         let libri = listaLibri.children; //Collection --> NON è un ARRAY
         
         console.log(libri);
-        for(let i = 0 ; i < libri.length; i++){
-            libri[i].setAttribute("class", "underLine");
-        }
+        // for(let i = 0 ; i < libri.length; i++){
+        //     libri[i].setAttribute("class", "underLine");
+        // }
 
+        [...libri].forEach(libro =>{
+            libro.setAttribute("class", "underLine");
+        })
 
     </script>
 </body>

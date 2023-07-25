@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- children[0] -->
+        <h1>Lista Libri</h1>
+        
+        <!-- children[1] -->
+        <ul id="listaLibri">
+            <!-- i miei li sono children[1].children -->
+            <li>Dune</li>
+            <li>Harry Potter</li>
+            <li>Le mille e una notte</li>
+            <li>Il rosso e il nero</li>
+            <li>Il conte di Montecristo</li>
+        </ul>
+    </div>
+
+    <script>
+
+        // let listaLibri = document.querySelectorAll("ul#listaLibri li");
+
+        // for(let i = 0; i < listaLibri.length; i++){
+        //     if(i%2 == 0){
+        //         listaLibri[i].setAttribute("class", "txtRed");
+        //     }else{
+        //         listaLibri[i].setAttribute("class", "txtBlue");
+        //     }
+        // }
+
+        // Versione 2
+        document.addEventListener("DOMContentLoaded", function(){
+            let list = document.querySelectorAll("#listaLibri li");
+            
+            array.forEach(element => {
+                
+            });
+        })
+
+
+    </script>
+
+</body>
+</html>

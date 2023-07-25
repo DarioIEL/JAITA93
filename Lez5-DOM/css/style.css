@@ -9,3 +9,13 @@
 .underLine{
     text-decoration: underline;
 }
+
+.txtGreen{
+    color: green;
+}
+
+.imgRes{
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+}
