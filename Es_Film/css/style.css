@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Dai+Banna+SIL:wght@300&family=Lisu+Bosa:wght@200&display=swap');
+
+
+body{
+    font-family: 'Lisu Bosa', serif;
+}
+
+h1,h2,h3,h4, a{    
+    font-family: 'Dai Banna SIL', serif;
+}
+
+.imgDim {
+    max-width: 200px;
+    height: auto;
+}
+
+.elenco {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+    row-gap: 1rem;
+}
+
+.cardFilm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 991px) {
+
+    
+    .cardFilm {
+       
+        width: 50%;
+    }
+
+}

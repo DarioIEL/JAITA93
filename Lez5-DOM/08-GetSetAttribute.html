@@ -17,6 +17,7 @@
         <img id="imgPianta" class="imgRes">
     </div>
 
+    <h3 id="titoloFondo" class="txtGreen"> Prova del titolo</h3>
 
     <script>
         //1: inserire la classe al titolo h1
@@ -59,9 +60,11 @@
             //soluzione con modulo
             // i = (i+1)%piante.length;
 
-        }, 3000)
+        }, 3000);
 
 
+        let classeDiH3 = document.querySelector("#titoloFondo").getAttribute("class");
+        console.log(classeDiH3);
         
     
     
