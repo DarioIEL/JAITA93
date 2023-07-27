@@ -33,15 +33,15 @@ let strobo2 = document.querySelector("#strobo2");
 
 let coloriDisponibili = ["hotpink", "lime", "deepskyblue", "moccasin", "purple", "red", "green", "yellow", "grey"];
 
+let indiceProgressivo = 0;
 /**
  * 
  * @param {HTMLElement} elemento 
  */
-let indiceProgressivo = 0;
 function cambiaColore(elemento){
     // let indiceCasuale = Math.floor(Math.random() * coloriDisponibili.length);
     // elemento.setAttribute("style", `background-color: ${coloriDisponibili[indiceCasuale]}`);
-    
+
     elemento.setAttribute("style", `background-color: ${coloriDisponibili[indiceProgressivo]}`);
     if(indiceProgressivo >= coloriDisponibili.length - 1){
         indiceProgressivo = 0;
@@ -57,4 +57,14 @@ strobo2.addEventListener("mouseover", function(){
 
 demo.addEventListener("click", function(){
     cambiaColore(this);
-})
+});
+
+/**
+ * 
+ * @param {string} nome 
+ */
+function saluta(nome){
+    console.log("ciao " + nome);
+}
+
+saluta("Dario");

@@ -11,13 +11,76 @@
 
     <h1>Scegli il colore</h1>
 
-    <div class="box" style="background-color: darkmagenta;">Color 1</div>
-    <div class="box" style="background-color: lime;">Color 1</div>
-    <div class="box" style="background-color: deepskyblue;">Color 1</div>
-    <div class="box" style="background-color: gold;">Color 1</div>
-    <div class="box" style="background-color: tomato;">Color 1</div>
+    <div id="box1" class="box" style="background-color: darkmagenta">Color 1</div>
+    <div id="box2" class="box" style="background-color: lime">Color 2</div>
+    <div id="box3" class="box" style="background-color: deepskyblue">Color 3</div>
+    <div id="box4" class="box" style="background-color: gold">Color 4</div>
+    <div id="box5" class="box" style="background-color: tomato">Color 5</div>
+
+    <div id="demoColor"></div>
+    <!-- Al click sul singolo box con il colore cambio il colore allo sfondo della pagina, inserendo il colore del box sul quale ho cliccato. Stampa il nome del colore all'interno di demoColor in un h1 -->
+    
+    <script>
+        let boxes = document.querySelectorAll(".box");
+        let body = document.querySelector("body");
+        let demoColor = document.querySelector("#demoColor");
+
+        boxes.forEach( box =>{
+            box.addEventListener("click", function(){
+                // let nomeColore = evento.target.style.backgroundColor;
+                let regolaStyle = this.getAttribute("style"); //background-color = ....
+                body.setAttribute("style", regolaStyle);
+
+                console.log(regolaStyle); 
+                
+                let colore = regolaStyle.split(" ")[1]; //split(" ") trasforma tutto in un array qundo trova " "
+                console.log(colore);
+
+                demoColor.innerHTML = "<h1>" + colore + "</h1>";
+            })
+        })
 
 
-    <!-- Al click sul singolo box con il colore cambio il colore allo sfondo della pagina, inserendo il colore del box sul quale ho cliccato -->
+
+
+
+        // //SOLUZIONE DI LUCA
+        // let body = document.querySelector("body");
+
+        // let box1 = document.querySelector("#box1");
+        // let box2 = document.querySelector("#box2");
+        // let box3 = document.querySelector("#box3");
+        // let box4 = document.querySelector("#box4");
+        // let box5 = document.querySelector("#box5");
+
+        // box1.addEventListener("click", function(){
+        //     //recupero lo style dal box
+        //     let stileBG = this.getAttribute("style"); // stileBG = "background-color: darkmagenta;"
+            
+        //     //assegno lo style al body
+        //     body.setAttribute("style", stileBG )
+        // });
+
+
+        // box2.addEventListener("click", function(){
+        //     let stileBG = this.getAttribute("style");
+        //     body.setAttribute("style", stileBG )
+        // })
+        // box3.addEventListener("click", function(){
+        //     let stileBG = this.getAttribute("style");
+        //     body.setAttribute("style", stileBG )
+        // })
+        // box4.addEventListener("click", function(){
+        //     let stileBG = this.getAttribute("style");
+        //     body.setAttribute("style", stileBG )
+        // })
+        // box5.addEventListener("click", function(){
+        //     let stileBG = this.getAttribute("style");
+        //     body.setAttribute("style", stileBG )
+        // })
+
+
+        
+    </script>
 </body>
 </html>
