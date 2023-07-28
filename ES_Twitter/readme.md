@@ -1,4 +1,4 @@
-### Twitter o simili
+# Twitter o simili
 
 1. Fornire un nome alla propria piattaforma di condivisione messaggi
 2. La piattaforma dovrà avere 2 pagine in totale
