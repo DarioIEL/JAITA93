@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1 id="titolo">Ciao</h1>
+    <p id="parag" class="txtGreen">Ciao Utente</p>
+    <img id="immagine" src="./img/pic.jpg" alt="immagine di un campo di fiori">
+
+    <div>Questo è il div demo</div>
+
+    <script>
+        
+        let titolo = document.querySelector("#titolo");
+        let parag = document.querySelector("#parag");
+        let immagine = document.querySelector("#immagine");
+
+        //1. hasAttribute() verifica se esiste un'attributo, qualasiasi esso sia: class id href src. PRODUCE UN BOOLEAN: true/false
+        console.log(titolo.hasAttribute("id")); //true;
+        console.log(titolo.hasAttribute("class")); //false;
+        console.log(titolo.hasAttribute("href")); //false; 
+        console.log(titolo.hasAttribute("src")); //false; 
+
+        console.log(parag.hasAttribute("id"));//true;
+        console.log(parag.hasAttribute("class")); //true;
+        console.log(parag.hasAttribute("href"));//false;
+        console.log(parag.hasAttribute("src")); //false
+
+
+        //2.getAttribute con questo metodo otteniamo il valore di un attributo, qualsiasi esso sia.
+        //Quando l'attributo non esiste la risposta è null
+        console.log("il valore dell'attributo id é: " + titolo.getAttribute("id") ); //titolo
+        console.log("Il valore dell'attributo href é : " + titolo.getAttribute("href")); //null
+        
+
+        console.log("Il valore dell'attribuo src per l'immagine é: " + immagine.getAttribute("src")); //./img/pic.jpg
+        
+        console.log("La classe del parag è: " + parag.getAttribute("class"));
+
+
+        //3. setAttribute("nomeAttributo", "valoreAttributo"), questo metodo imposta un attributo con il suo valore
+        
+        parag.setAttribute("title", "titolo del paragrafo") 
+        titolo.setAttribute("class", "txtRed");
+
+
+        //setto l'attributo id al mio div
+        document.querySelector("div").setAttribute("id", "demo");
+
+
+        if(immagine.hasAttribute("alt") && immagine.getAttribute("alt") != ""){
+            console.log("tutto ok non devo aggiungere il testo alt");
+        }else{
+            immagine.setAttribute("alt", "immagine presa a casaccio");
+        }
+
+
+
+        
+
+    </script>
+</body>
+</html>

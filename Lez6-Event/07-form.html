@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Compila il seguente form</h1>
+
+    <!-- action="#" resto fermo sulla pagina  -->
+    <form id="formReg" method="GET" action="./07-benvenuto.html">
+
+        <input type="text" id="nome" name="nomeUtente" placeholder="inserisci il tuo nome">
+
+        <input type="number" id="eta" name="eta" placeholder="Inserisci la tua età">
+
+        <!-- input type = "submit" permette di sottoscrivere il form, cioè inviarlo -->
+        <input type="submit" value="Invia">
+        <!-- oppure -->
+        <!-- <button type="submit"> Invia </button> -->
+    </form>
+
+    <div id="demo"></div>
+    
+
+    <script>
+        let demo = document.querySelector("#demo");
+
+        let formReg = document.querySelector("#formReg");
+
+        //mostraDati() scrive nel demo il valore dei campi input
+        function controllaDati(){
+
+        
+            demo.innerHTML = "";
+            
+            //la gestione del form avviene attraverso la prop NAME dei singoli input
+            if(formReg.nomeUtente.value == ""){
+                demo.innerHTML += "Hai dimenticato il nome <br>";
+                event.preventDefault();
+            }
+
+            if(formReg.eta.value == ""){
+                demo.innerHTML += "Hai dimenticato l'età <br>";
+                event.preventDefault();
+            }
+
+
+            // if(formReg.nomeUtente.value != "" && formReg.eta.value != ""){
+            //     demo.innerHTML = formReg.nomeUtente.value + " " + formReg.eta.value;
+            //     console.log(formReg);
+            // }
+            
+            console.log(event);
+            //event.preventDefault() evita che venga ricaricata la pagina e insegua la action quindi che venga fatto il "submit"
+            //event è proprio il submit
+            // event.preventDefault();
+        }
+
+
+        formReg.addEventListener("submit", controllaDati);
+        
+
+
+
+    </script>
+
+</body>
+</html>

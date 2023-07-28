@@ -19,10 +19,11 @@ function controlla(){
         demo.innerHTML = "C'è qualcosa che non va, hai dimenticato di compilare qualche campo";
         //event.preventDefault() impedisce che il form venga lanciato se c'è qualcosa che non è a posto
         event.preventDefault();
+    }else{
+  
+        demo.innerHTML = "Informazioni acquisite";
     }
 }
 
 btn.addEventListener("click", controlla);
-
-
 
