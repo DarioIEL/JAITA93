@@ -20,9 +20,9 @@
             <div class="nav navbar-nav">
                 <a class="nav-item nav-link active" href="#" aria-current="page">Home <span
                         class="visually-hidden">(current)</span></a>
-                <a class="nav-item nav-link active" href="#" aria-current="page">Carrello</a>
-                <a class="nav-item nav-link active" href="#" aria-current="page">Chi Siamo</a>
-                <a class="nav-item nav-link active" href="#" aria-current="page">Dove Siamo</a>
+                <a class="nav-item nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"  aria-current="page">Carrello</a>
+                <a class="nav-item nav-link" href="#" aria-current="page">Chi Siamo</a>
+                <a class="nav-item nav-link" href="#" aria-current="page">Dove Siamo</a>
             </div>
         </nav>
 
@@ -35,13 +35,32 @@
             <div class="container mt-5">
                 <h1 class="text-center">I nostri Viaggi</h1>
                 
-                <div id="grigliaViaggi" class="row">
+                <div id="grigliaViaggi" class="row gy-4">
                 </div>
 
             </div>
 
         </section>
 
+        <section>
+        
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrello</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div id="listaCarrello">
+                    Inserire i viaggi da acquistare 
+                  </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="sticky-bottom text-center bottom-0 end-0" id="spazioAlert">
+
+        </div>
 
     </main>
     <footer>
