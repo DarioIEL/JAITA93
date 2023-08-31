@@ -79,7 +79,6 @@ let adminJSON = '{"nome": "Anna", "role": "Admin", "id": 0, "attivo": true}';
 console.log(adminJSON);
 
 //Trasformo questa string in un obj di tipo JS
-
 let admin = JSON.parse(adminJSON);
 
 console.log(admin);
@@ -97,3 +96,4 @@ function AdminOBJ(nome, role, id, attivo){
 let mioAdminObj = new AdminOBJ(admin.nome, admin.role, admin.id, admin.attivo);
 
 console.log(mioAdminObj.nome);
+console.log(mioAdminObj.id);
