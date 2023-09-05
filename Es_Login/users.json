@@ -1,0 +1,35 @@
+{
+    "numeroUtenti": 5,
+    "data": [
+        {
+            "id":0,
+            "nome": "Mario",
+            "pass": "abcdefg",
+            "mail": "mario@mail.com"
+        },
+        {
+            "id":1,
+            "nome": "Anna",
+            "pass": "12345",
+            "mail": "anna@mail.com"
+        },
+        {
+            "id": 2,
+            "nome": "Stellina84",
+            "pass": "ILovePippo3000",
+            "mail": "stellina@mail.com"
+        },
+        {
+            "id": 3,
+            "nome": "Pippo3000",
+            "pass": "MiPiaceIlPallone",
+            "mail": "pippo3000@mail.com"
+        },
+        {
+            "id": 4,
+            "nome": "Jack85",
+            "pass": "StellinaVitaMia",
+            "mail": "jack@mail.com"
+        }
+    ]
+}
