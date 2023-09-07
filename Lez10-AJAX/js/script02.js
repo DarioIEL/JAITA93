@@ -7,7 +7,7 @@ fetch(URL)
     return data.json();
 })
 .then(response =>{
-    console.log(response.users);
+    console.log(response);
     stampaCard(response.users);
 })
 
@@ -17,10 +17,11 @@ fetch(URL)
 function stampaCard(utenti){
 
     utenti.forEach(utente =>{
-        demo.innerHTML += `${utente.firstName} ${utente.lastName} <br>
-                            <img src='${utente.image}' class='imgDim'> <br>
-                            Indirizzo: <p> ${utente.address.address} - ${utente.address.city} - ${utente.address.state} </p>
-                            <hr>`;
+        demo.innerHTML += 
+        `${utente.firstName} ${utente.lastName} <br>
+        <img src='${utente.image}' class='imgDim'> <br>
+        Indirizzo: <p> ${utente.address.address} - ${utente.address.city} - ${utente.address.state} </p>
+        <hr>`;
     });
 
 }

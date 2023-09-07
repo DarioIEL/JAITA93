@@ -74,7 +74,7 @@ console.log(user);
 ///////////////////////////////
 //"Ricevo" un JSON per trasformarlo in un oggetto di JS
 
-let adminJSON = '{"nome": "Anna", "role": "Admin", "id": 0, "attivo": true}';
+let adminJSON = '{"nome": "Anna", "role: "Admin", "id": 0, "attivo": true}';
 
 console.log(adminJSON);
 
