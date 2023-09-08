@@ -63,3 +63,4 @@ Settare Execution Policy
 
 # Alternativa
 mock.api
+Firebase

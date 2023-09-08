@@ -21,12 +21,12 @@ fetch(URL)
     // leggo i dati, stampo l'array degli utenti
     console.log(response.data); //.data è la prop dell'oggetto che nasconde un array di persone
 
-    utenti = response.data;
+    utenti = response.data; //utenti : Array[Object]
 
     //voglio stampare il nome di ognuna delle 6 persone
-    response.data.forEach(persona => {
+    utenti.forEach(persona => {
         console.log(persona.first_name);
-        demo.innerHTML += "<li>" + persona.first_name + " " + persona.last_name + "</li>";
+        demo.innerHTML += "<li>" + persona.first_name + " " + persona.last_name + " " + persona.email +  "</li>";
     });
 
     console.log(utenti);
