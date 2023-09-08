@@ -1,0 +1,55 @@
+{
+  "studenti": [
+    {
+      "id": 1,
+      "nome": "Laura",
+      "cognome": "Comparelli"
+    },
+    {
+      "id": 2,
+      "nome": "Emanuele",
+      "cognome": "Renzetti"
+    },
+    {
+      "id": 3,
+      "nome": "Piera",
+      "cognome": "Scognamiglio"
+    },
+    {
+      "nome": "Domenico",
+      "cognome": "Mele",
+      "id": 4
+    },
+    {
+      "nome": "Luca",
+      "cognome": "Riccardi",
+      "id": 5
+    },
+    {
+      "nome": "MArco",
+      "cognome": "Anatra",
+      "id": 6
+    }
+  ],
+
+  "docenti": [
+    {
+      "id":1,
+      "nome": "Dario Mennillo",
+      "materia": "Javascript",
+      "stauts": "online"
+    },
+    {
+      "id":2,
+      "nome": "Milo Spandre",
+      "materia": "HTML & CSS",
+      "stauts": "online"
+    },
+    {
+      "id":3,
+      "nome": "Mauro Bogliaccino",
+      "materia": "Java",
+      "stauts": "offline"
+    }
+  ]
+}
