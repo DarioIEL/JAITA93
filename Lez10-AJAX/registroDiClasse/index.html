@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="d-grid gap-2">
-                          <button type="button" id="btnInserisci" class="btn btn-primary">Inserisci</button>
+                            <button type="button" id="btnInserisci" class="btn btn-primary">Inserisci</button>
                         </div>
 
                     </div>
@@ -54,7 +54,7 @@
 
                 <ul class="list-group" id="listaStudenti">
                     <!-- <li class="list-group-item">Active item</li> -->
-                    
+
                 </ul>
             </div>
         </section>
@@ -63,10 +63,17 @@
             <div class="container">
                 <h2>Lista Docenti</h2>
 
-                
-                <button class="btn btn-success">Mostra solo Online</button>
-                <button class="btn btn-danger">Mostra solo Offline</button>
+
+                <button id="btnOn" class="btn btn-success" data-status="online">Mostra solo Online</button>
+                <button id="btnOff" class="btn btn-danger" data-status="offline">Mostra solo Offline</button>
+                <button id="btnAll" class="btn btn-primary" data-status="all">Mostra tutti</button>
+
+
+                <div class="row" id="listaDocenti">
+                </div>
+
             </div>
+
 
         </section>
 
@@ -86,6 +93,7 @@
 
     <script src="./js/scriptClasse.js"></script>
     <script src="./js/scriptRegistraStud.js"></script>
+    <script src="./js/scriptDocenti.js"></script>
 </body>
 
 </html>

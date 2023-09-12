@@ -21,7 +21,25 @@ function creaCard(studente) {
 
     let btnElim = document.createElement("button");
     btnElim.setAttribute("class", "btn btn-default d-inline-block ms-auto");
-    btnElim.innerHTML = "X"
+    btnElim.innerHTML = "X";
+
+    btnElim.addEventListener("click", function(){
+        let UrlEliminazione = URL + "/" + studente.id;
+
+        //ATT: la funzione creaCard viene richiamata all'interno della prima fetch. La funzione legata al pulsante X ha al suo interno una fetch --> fetch dentro un'altra fetch
+        fetch(UrlEliminazione, {
+            method: "DELETE",
+            headers:{
+                "Content-Type": "application/json"
+            }
+        })
+        .then(data =>{return data.json()})
+        .then(response =>{
+            location.href = "utenteEliminato.html"
+        })
+    })
+
+
     card.appendChild(btnElim);
 
     listaStudenti.appendChild(card);
