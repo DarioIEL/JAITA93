@@ -15,7 +15,7 @@ function caricaNuovoPost(){
             "Content-Type": "application/json"
         },
         body: JSON.stringify(nuovoPost)
-    })
+        })
     .then(data =>{ return data.json() })
     .then(response => {
         console.log(response, "registrato");

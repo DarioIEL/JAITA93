@@ -34,9 +34,7 @@ function creaCard(studente) {
             }
         })
         .then(data =>{return data.json()})
-        .then(response =>{
-            location.href = "utenteEliminato.html"
-        })
+
     })
 
 
